@@ -4,7 +4,8 @@
   "description": "personal .spacemacs setup",
   "main": "index.js",
   "scripts": {
-    "sync": "cp ~/.spacemacs . && git add . && git commit -m 'updated config'"
+    "bkp": "cp ~/.spacemacs ./",
+    "restore": "mv ~/.spacemacs ~/.spacemacs_bkp && cp .spacemacs ~/.spacemacs"
   },
   "repository": {
     "type": "git",
