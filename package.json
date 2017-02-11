@@ -1,0 +1,19 @@
+{
+  "name": "spacemacs-setup",
+  "version": "1.0.0",
+  "description": "personal .spacemacs setup",
+  "main": "index.js",
+  "scripts": {
+    "sync": "cp ~/.spacemacs . && git add . && git commit -m 'updated config'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vedovato/spacemacs-setup.git"
+  },
+  "author": "Andrei Vedovato",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vedovato/spacemacs-setup/issues"
+  },
+  "homepage": "https://github.com/vedovato/spacemacs-setup#readme"
+}
