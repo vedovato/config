@@ -1,0 +1,2 @@
+# .spacemacs
+personal .spacemacs setup
