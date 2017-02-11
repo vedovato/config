@@ -1,11 +1,12 @@
 {
-  "name": "spacemacs-setup",
+  "name": "config",
   "version": "1.0.0",
-  "description": "personal .spacemacs setup",
-  "main": "index.js",
+  "description": "personal config files",
   "scripts": {
-    "bkp": "cp ~/.spacemacs ./",
-    "restore": "mv ~/.spacemacs ~/.spacemacs_bkp && cp .spacemacs ~/.spacemacs"
+    "bkp-spacemacs": "cp ~/.spacemacs ./",
+    "restore-spacemacs": "mv ~/.spacemacs ~/.spacemacs_bkp && cp .spacemacs ~/.spacemacs",
+    "bkp-zshrc": "cp ~/.zshrc ./",
+    "restore-zshrc": "mv ~/.zshrc ~/.zshrc_bkp && cp .zshrc ~/.zshrc"
   },
   "repository": {
     "type": "git",
