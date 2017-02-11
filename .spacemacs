@@ -72,6 +72,9 @@ values."
    dotspacemacs-install-packages 'used-only))
 
 (defun dotspacemacs/init ()
+  (setq ns-use-srgb-colorspace nil)
+  (setq powerline-default-separator 'utf-8)
+  (setq initial-frame-alist '((top . 30) (left . 100) (width . 130) (height . 45)))
   "Initialization function.
 This function is called at the very startup of Spacemacs initialization
 before layers configuration.
