@@ -307,7 +307,7 @@ values."
 
 (defun dotspacemacs/user-init ()
   (webdev-indent 2) ; indent 2 spaces width
-  "Initialization function for user code.
+"Initialization function for user code.
 It is called immediately after `dotspacemacs/init', before layer configuration
 executes.
  This function is mostly useful for variables that need to be set
@@ -316,6 +316,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
   )
 
 (defun dotspacemacs/user-config ()
+  (indent-guide-global-mode)
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
 layers configuration.
