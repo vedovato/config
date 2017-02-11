@@ -291,6 +291,10 @@ values."
    ))
 
 
+;; disables soft-wrap
+(add-hook 'hack-local-variables-hook (lambda () (setq truncate-lines t)))
+
+
 (defun webdev-indent (n)
   ;; web development
   (setq coffee-tab-width n) ; coffeescript
