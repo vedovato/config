@@ -1,2 +1,2 @@
-# .spacemacs
-personal .spacemacs setup
+# Dotfiles
+personal setups
