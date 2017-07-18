@@ -7,7 +7,13 @@ export ZSH=/Users/vedovato/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME=""
+
+#source ~/.oh-my-zsh/custom/themes/geometry/geometry.zsh
+#PROMPT_GEOMETRY_COLORIZE_SYMBOL=TRUE
+#GEOMETRY_PROMPT_PLUGINS=(virtualenv docker_machine exec_time git hg)
+
+
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -52,7 +58,7 @@ ZSH_THEME="agnoster"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
-
+plugins=(zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -83,7 +89,66 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+# DEFAULT_USER="vedovato"
+
+# Loading NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Pure prompt setup
+# autoload -U promptinit; promptinit
+# prompt pure
+
+
+autoload -U promptinit && promptinit
+prompt purity
+
+
+# Custom aliases
+alias dev='cd ~/Projects/'
+alias proj='dev'
+alias htdocs='cd /Applications/MAMP/htdocs'
+alias sind='dev && cd sindicond'
+
+# - azanelli / start
+alias aza='cd /Applications/MAMP/htdocs/azanelli/catalog/view/theme/azanelli'
+alias azassh='ssh azanelli.com.br@azanelli-com-br.umbler.net -p 9922'
+alias azanelli='aza'
+# - azanelli / end
+
+# - feathers aliases / start
+alias fgapp='feathers generate app'
+alias fga='feathers generate authentication'
+alias fgs='feathers generate service'
+alias fgh='feathers generate hook'
+# - feathers aliases / end
+
+# - android sdk path / start
+export ANDROID_HOME=/Users/vedovato/Library/Android/sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+# - android sdk path / end
+
+# Yarn
+export PATH="$PATH:`yarn global bin`"
+
+alias t='tree'
+
+alias gs='git status'
+alias gl='git log'
 
 
 
-DEFAULT_USER="vedovato"
+# Tiny care terminal stuff
+#export TTC_SAY_BOX='cat'
+export TTC_REPOS='~/Projects/sindicond,~/Projects/weeknd_hackathon'
+export TTC_WEATHER='Americana, Brasil'
+export TTC_CELSIUS=true
+export TTC_TERMINAL_TITLE=false
+export TTC_GITBOT='gitlog'
+export TTC_BOTS='selfcare_bot,magicrealismbot'
+
+export TTC_CONSUMER_KEY='aOr6lG1sOrc9dwIXu919xHjSG'
+export TTC_CONSUMER_SECRET='kG4cE94coKo8Hnltgz1AjIfYA84f4Hwxh0OPIq0uxJ5tQjiSkU'
+export TTC_ACCESS_TOKEN='1060294436-BozA0777oMGuVMx7S8kLKRzgsWL1x1MCrrHRqU0'
+export TTC_ACCESS_TOKEN_SECRET='qqLfuH3fZvQ90WxuqUxW8JV8lUwHaM4Y9uoLz3moi2fkf'
