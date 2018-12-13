@@ -1,65 +1,60 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible
+filetype off
 
-set rtp+=~/.janus/Vundle.vim
-call vundle#begin('~/.janus')
-Plugin 'tpope/vim-fugitive'
+set rtp+=~/.vim/.janus/Vundle.vim
+call vundle#begin('~/.vim/.janus')
 Plugin 'VundleVim/Vundle.vim'
-"Plugin 'fugalh/desert.vim.git'
-"Plugin 'Lokaltog/vim-distinguished'
-Plugin 'kristijanhusak/vim-hybrid-material'
-Plugin 'vim-scripts/indentLine.vim'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'pangloss/vim-javascript'
-Plugin 'isRuslan/vim-es6'
-Plugin 'mxw/vim-jsx'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'Raimondi/delimitMate'
-Plugin 'marijnh/tern_for_vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'mattn/emmet-vim'
-Plugin 'wavded/vim-stylus'
+Plugin 'tpope/vim-surround'
+Plugin 'sheerun/vim-polyglot'
 Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'vim-syntastic/syntastic'
+Plugin 'gmist/vim-palette'
+
+Plugin 'pangloss/vim-javascript'
+Plugin 'jparise/vim-graphql'
+Plugin 'w0rp/ale'
+
+"Plugin 'mattn/emmet-vim'
+"Plugin 'mileszs/ack.vim'
+
+"Plugin 'ternjs/tern_for_vim'
+"Plugin 'Valloric/YouCompleteMe'
+"Plugin 'vim-scripts/indentLine.vim'
 call vundle#end()
+filetype plugin indent on
 
-" Enables vim-jsx to .js file as well as .jsx ones
-let g:jsx_ext_required = 0
-
-let g:syntastic_javascript_checkers=['eslint']
-"let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
-
-" Remaps to Ctrl+C the delimitMate
-imap <C-c> <CR><Esc>0
-
-" These are the tweaks I apply to YCM's config, you don't need them but they might help.
-" YCM gives you popups and splits by default that some people might not like, so these should tidy it up a bit for you.
-let g:ycm_add_preview_to_completeopt=0
-let g:ycm_confirm_extra_conf=0
-set completeopt-=preview
-
-" Enable .hidden files by default
-let NERDTreeShowHidden=1
-
-
-set t_Co=256
-syntax on
-set background=dark
-set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
+"set textwidth=80
 set autoindent
-set textwidth=80
+set expandtab
 
-" Disable arrow keys \,,/
-noremap <Up> <nop>
-noremap <Down> <nop>
-noremap <Left> <nop>
-noremap <Right> <nop>
+let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#left_sep = ' '
+"let g:airline#extensions#tabline#left_alt_sep = '|'
 
-let g:airline_theme = "hybrid"
-let g:enable_bold_font = 1
+set mouse=a
 set background=dark
-colorscheme hybrid_material
+set relativenumber
+set t_Co=256
+set termguicolors
+set cursorline
+set cursorcolumn
+
+syntax on
+colorscheme PaperColor
+
+"nmap <silent> <S-k> <Plug>(ale_previous_wrap)
+"nmap <silent> <S-j> <Plug>(ale_next_wrap)
+
+"let g:jsx_ext_required=0
+"let g:graphql_javascript_tags = []
+"let g:ale_set_loclist=0
+"let g:ale_set_quickfix=1
+"let g:ale_open_list=1
+"let g:ale_keep_list_window_open=0
+
+let g:enable_bold_font=1
+let NERDTreeShowHidden=1
+let NERDTreeShowLineNumbers=1
+autocmd FileType nerdtree setlocal relativenumber
